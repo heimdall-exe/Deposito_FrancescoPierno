@@ -1,5 +1,6 @@
 package EsercizioMeteo;
 
+//display console
 public class DisplayConsole implements Display {
     @Override
     public void aggiorna (float temperatura){

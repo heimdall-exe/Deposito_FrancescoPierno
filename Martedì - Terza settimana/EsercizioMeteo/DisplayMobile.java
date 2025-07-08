@@ -1,5 +1,6 @@
 package EsercizioMeteo;
 
+//display mobile
 public class DisplayMobile implements Display {
     @Override
     public void aggiorna (float temperatura){
