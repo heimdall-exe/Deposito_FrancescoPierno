@@ -14,7 +14,7 @@ class HardDisk {
     }
 }
 
-// DESIGN PATTER AGGIUNTIVO 1: Singleton, rendo SistemaOperativo l'unica istanza (come nella realtà)
+// DESIGN PATTERN AGGIUNTIVO 1: Singleton, rendo SistemaOperativo l'unica istanza (come nella realtà)
 class SistemaOperativo {
     private static SistemaOperativo instance;
 
@@ -28,11 +28,11 @@ class SistemaOperativo {
     }
 
     public void avvia() {
-        System.out.println("Sistema Operativo: BIP BOP BUP, AVVIO COMPLETATO, SACCO DI CARNE!");
+        System.out.println("Sistema Operativo: BIP BOP BUP, AVVIO COMPLETATO, SACCO DI CARN-ehm CARO UTENTE!");
     }
 }
 
-// DESIGN PATTER AGGIUNTIVO 2: Observer, creo AvvioUtente che notifichi l'utente quando il sistema è avviato
+// DESIGN PATTERN AGGIUNTIVO 2: Observer, creo AvvioUtente che notifichi l'utente quando il sistema è avviato
 interface AvvioUtente {
     void onAvvioCompletato();
 }
@@ -57,14 +57,14 @@ class ComputerFacade {
         this.utenteNotificato = utenteNotificato;
     }
 
-    //Metodo che notifica l'utente, tramite l'Observer, quando il sistema è pronto
+    //Metodo che avvia tutti i componenti insieme ...
     public void accendiComputer() {
         System.out.println("BROOM, BROOM! Avvio computer in corso...");
         bios.inizializza();
         hardDisk.carica();
         sistemaOperativo.avvia();
         if (utenteNotificato != null) {
-            utenteNotificato.onAvvioCompletato();
+            utenteNotificato.onAvvioCompletato(); // ...e che notifica l'utente, tramite l'Observer, quando il sistema è pronto
         }
     }
 }

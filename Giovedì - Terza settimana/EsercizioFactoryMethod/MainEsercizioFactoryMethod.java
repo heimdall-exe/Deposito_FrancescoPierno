@@ -58,9 +58,9 @@ class VeicoloFactory {
 // Main
 public class MainEsercizioFactoryMethod {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("Quale veicolo vuoi creare (auto/moto/camion)? ");
-        String tipo = scanner.nextLine();
+        String tipo = sc.nextLine();
 
         IVeicolo veicolo = VeicoloFactory.CreaVeicolo(tipo);
 
@@ -69,6 +69,6 @@ public class MainEsercizioFactoryMethod {
             veicolo.MostraTipo();
         }
         
-        scanner.close();
+        sc.close();
     }
 }
