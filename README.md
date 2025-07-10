@@ -1,2 +1,2 @@
 # Deposito_FrancescoPierno
-Qui c'è la descrizione. Ed è molto bella.
+In questa repository ci sono le cartelle delle singole giornate di corso con all'interno i relativi esercizi/spiegazioni.
